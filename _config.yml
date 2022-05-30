@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=nJce0OsAAAAJ&hl=en&oi=ao"
-  email            : "xzhang7(at)caltech(dot)edu"
+  email            : #"xzhang7(at)caltech(dot)edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
