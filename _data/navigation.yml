@@ -7,7 +7,7 @@ main:
   #   url: /talks/    
 
   - title: "Publications"
-    url: /publications/    
+    url: /markdown/    
   
   - title: "CV"
     url: /cv/
