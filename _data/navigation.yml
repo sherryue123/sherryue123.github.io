@@ -3,22 +3,20 @@ main:
   - title: "Home"
     url: /
 
-  # - title: "Research" TODO
+  # - title: "Talks"
   #   url: /talks/    
 
-  - title: "Publication"
-    url: /talks/    
-  
-    - title: "CV"
-    url: /cv/
+  # - title: "Teaching"
+  #   url: /teaching/    
     
-  - title: "More" # teaching, mentoring, outreach
-    url: /teaching/
+  # - title: "Portfolio"
+  #   url: /portfolio/
         
   # - title: "Blog Posts"
   #   url: /year-archive/
     
-
+  - title: "CV"
+    url: /cv/
     
   # - title: "Guide"
   #   url: /markdown/
