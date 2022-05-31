@@ -1,16 +1,18 @@
 ---
-permalink: /markdown/
-title: "markdown"
+title: "Publications"
+permalink: /publications/
 author_profile: true
-redirect_from: 
-  - /md/
-  - /markdown.html
+redirect_from:
+	- /publications/
+	- /publications.html
 ---
 
-The up-to-date publication list can always be found on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% if author.googlescholar %}
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% endif %}
 
-# Journals
-* Quantum electrodynamics in a topological waveguide
+{% include base_path %}
 
-
-# Conferences
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
