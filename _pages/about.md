@@ -12,3 +12,6 @@ I am a Ph.D. candidate in [Applied Physics](https://aph.caltech.edu/) at Caltech
 Before my Ph.D., my research focused on micro- and nano-photonic devices, studying both the underlying physics and their applications. I was fortunate to collaborate with many great advisors around the globe.
 
 Feel free to reach me at xzhang7(at)caltech(dot)edu!
+
+## Upcoming activities
+* I am attending [GRC Quantum Science](https://www.grc.org/quantum-science-conference/2022/) 2022 in Easton MA (July 24-29). Hope to connect with you there!
