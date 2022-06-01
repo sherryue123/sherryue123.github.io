@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-[CV](http://sherryue123.github.io/files/CV_website_05312022.pdf) updated in May 2022.
+[CV](http://xueyue-sherry-zhang.github.io/files/CV_website_05312022.pdf) updated in May 2022.
