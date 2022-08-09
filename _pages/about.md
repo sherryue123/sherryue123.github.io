@@ -14,5 +14,5 @@ Before my Ph.D., my research focused on micro- and nano-photonic devices, studyi
 Feel free to reach me at xzhang7(at)caltech(dot)edu!
 
 ## News and upcoming activities
+* I'm giving an AMO/QI seminar talk titled "A scalable superconducting quantum architecture with long-range connectivity" on August 24th at UC Berkeley. 
 * Our manuscript ''A scalable superconducting quantum simulator with long-range connectivity based on a photonic bandgap metamaterial'' is now on arXiv. Please check it out at [arXiv: 2206.12803](https://arxiv.org/abs/2206.12803).
-* I am attending [GRC Quantum Science](https://www.grc.org/quantum-science-conference/2022/) 2022 in Easton MA (July 24-29). Hope to connect with you there!
