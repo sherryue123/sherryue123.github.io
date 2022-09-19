@@ -14,6 +14,4 @@ Before graduate school, I focused on micro- and nano-photonic devices, studying 
 Feel free to reach me at xzhang7(at)caltech(dot)edu!
 
 ## News and upcoming activities
-* I'm giving an invited (outreach) talk at the [FUTURE of Physics 2022](https://future.pma.caltech.edu/) on September 12th at Caltech. Looking forward to meeting the new generation of women in physics! 
-* I'm giving an invited talk at Stanford University titled "A scalable superconducting quantum architecture with long-range connectivity" on September 16th. You can also tune in to the seminar via zoom. Let me know if you need the link.
 * Our manuscript ''A scalable superconducting quantum simulator with long-range connectivity based on a photonic bandgap metamaterial'' is now on arXiv. Please check it out at [arXiv: 2206.12803](https://arxiv.org/abs/2206.12803).
