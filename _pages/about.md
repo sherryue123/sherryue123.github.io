@@ -15,6 +15,7 @@ Feel free to reach me at xzhang7(at)caltech(dot)edu!
 
 ## News and upcoming activities
 * I will join UC Berkeley as a [Miller research fellow](https://miller.berkeley.edu/about) working with Prof. [Alp Sipahigil](https://quantumdevices.berkeley.edu/) starting from April, 2023. Excited to start a new journey!
+* **2/21/2023** I have passed my thesis defense with the title "Superconducting circuit architectures based on waveguide quantum electromagnetics" and become Dr. Zhang! 
 * **1/20/2023** Our manuscript ''A superconducting quantum simulator basedon a photonic-bandgap metamaterial'' is published in Science as a Research Article! [*Science* **379**, 6629 (2023)](https://www.science.org/doi/10.1126/science.ade7651).
 * **12/15/2022** I'm giving an invited talk at the QuantumFest (Harvard Quantum Initiative)  titled "A scalable superconducting quantum architecture with long-range connectivity". 
 * **9/16/2022** I'm giving an invited special seminar at Stanford University  titled "A scalable superconducting quantum architecture with long-range connectivity". 
