@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Miller Postdoctoral Fellow at UC Berkeley working with [Alp Sipahigil](https://quantumdevices.berkeley.edu/team/). I obtained my Ph.D. in Applied Physics from Caltech in 2023 and B. Eng. from Tsinghua University in 2017. 
+I am a Miller Postdoctoral Fellow at UC Berkeley, working with [Alp Sipahigil](https://quantumdevices.berkeley.edu/team/). I received my Ph.D. in Applied Physics from Caltech in 2023 and B.Eng. from Tsinghua University in 2017. 
 
 I am dedicated to pushing the boundaries of quantum technology and unlocking its potential for solving complex problems in information processing and fundamental sciences. My research focuses on developing cutting-edge quantum hardware to overcome the limitations of existing solid-state quantum platforms and explore uncharted territories in physics research. Having previously introduced long-range connectivity to superconducting circuit architectures, I am now a Miller Fellow, investigating innovative telecom-band quantum emitters in the mature silicon host material. In addition, I bring a rich background in micro- and nano-photonic devices, leveraging my expertise to create robust, scalable quantum processors that can simulate many-body physics and drive advancements in both practical applications and theoretical understanding. 
 
