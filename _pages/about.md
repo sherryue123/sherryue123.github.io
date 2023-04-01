@@ -7,14 +7,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Ph.D. candidate in [Applied Physics](https://aph.caltech.edu/) at Caltech, advised by Prof. [Oskar Painter](https://copilot.caltech.edu/people/principal). My current research lies at the intersection of engineering and quantum physics, towards advancing quantum processors for both practical applications and fundamental studies. Specifically, I utilize microwave photons in engineered waveguides as messengers between superconducting qubits (waveguide QED) to achieve long-range qubit-qubit coupling with various spatial profiles. With our recent progress, I can employ multi-qubit quantum processors for quantum simulation of many-body physics.
+I am a Miller Postdoctoral Fellow at UC Berkeley working with [Alp Sipahigil](https://quantumdevices.berkeley.edu/team/). I obtained my Ph.D. in Applied Physics from Caltech in 2023 and B. Eng. from Tsinghua University in 2017. 
 
-Before graduate school, I focused on micro- and nano-photonic devices, studying both the underlying physics and their applications. I was fortunate to collaborate with many great advisors around the globe.
+I am dedicated to pushing the boundaries of quantum technology and unlocking its potential for solving complex problems in information processing and fundamental sciences. My research focuses on developing cutting-edge quantum hardware to overcome the limitations of existing solid-state quantum platforms and explore uncharted territories in physics research. Having previously introduced long-range connectivity to superconducting circuit architectures, I am now a Miller Fellow, investigating innovative telecom-band quantum emitters in the mature silicon host material. In addition, I bring a rich background in micro- and nano-photonic devices, leveraging my expertise to create robust, scalable quantum processors that can simulate many-body physics and drive advancements in both practical applications and theoretical understanding. 
 
-Feel free to reach me at xzhang7(at)caltech(dot)edu!
+I have been fortunate to have collaborated with outstanding mentors/colleagues from around the world, including [Oskar Painter](https://painterlab.caltech.edu/faculty/), [Soonwon Choi](https://physics.mit.edu/faculty/soonwon-choi/), [Alejandro González-Tudela](https://sites.google.com/view/gonzaleztudela), [Kerry Vahala](https://vahala.caltech.edu/people), [Yun-Feng Xiao](http://researchgroups.pku.edu.cn/microcavity/en/zdylm/12811/list/index.htm), and [Wenshan Cai](https://cailab.gatech.edu/group.html).
+
+Feel free to reach me at sherryue123(at)gmail(dot)com!
 
 ## News and upcoming activities
-* I will join UC Berkeley as a [Miller research fellow](https://miller.berkeley.edu/about) working with Prof. [Alp Sipahigil](https://quantumdevices.berkeley.edu/) starting from April, 2023. Excited to start a new journey!
+* **4/3/2023** I will be visiting Columbia University and giving a seminar "Superconducting Circuit Architectures Based on Light-Matter Interactions".
+* **3/28/2023** I have joined UC Berkeley as a [Miller research fellow](https://miller.berkeley.edu/about) working with  [Alp Sipahigil](https://quantumdevices.berkeley.edu/). 
 * **2/21/2023** I have passed my thesis defense with the title "Superconducting circuit architectures based on waveguide quantum electromagnetics" and become Dr. Zhang! 
 * **1/20/2023** Our manuscript ''A superconducting quantum simulator basedon a photonic-bandgap metamaterial'' is published in Science as a Research Article! [*Science* **379**, 6629 (2023)](https://www.science.org/doi/10.1126/science.ade7651).
 * **12/15/2022** I'm giving an invited talk at the QuantumFest (Harvard Quantum Initiative)  titled "A scalable superconducting quantum architecture with long-range connectivity". 
