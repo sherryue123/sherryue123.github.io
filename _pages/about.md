@@ -13,7 +13,7 @@ I am dedicated to pushing the boundaries of quantum technology and unlocking its
 
 I have been fortunate to have collaborated with outstanding mentors/colleagues from around the world, including [Oskar Painter](https://painterlab.caltech.edu/faculty/), [Soonwon Choi](https://physics.mit.edu/faculty/soonwon-choi/), [Alejandro González-Tudela](https://sites.google.com/view/gonzaleztudela), [Kerry Vahala](https://vahala.caltech.edu/people), [Yun-Feng Xiao](http://researchgroups.pku.edu.cn/microcavity/en/zdylm/12811/list/index.htm), and [Wenshan Cai](https://cailab.gatech.edu/group.html).
 
-Feel free to reach me at sherryue123(at)gmail(dot)com!
+Feel free to reach me at x(dot)sherry(dot)zhang(at)berkeley(dot)edu!
 
 ## News and upcoming activities
 * **4/3/2023** I will be visiting Columbia University and giving a seminar "Superconducting Circuit Architectures Based on Light-Matter Interactions".
