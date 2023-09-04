@@ -15,7 +15,10 @@ I have been fortunate to have collaborated with outstanding mentors/colleagues f
 
 Feel free to reach me at x(dot)sherry(dot)zhang(at)berkeley(dot)edu!
 
-## News and upcoming activities
+## News and activities
+* **8/3/2023** It was really fun giving a Spark talk at the Challenge Institute of Quantum Computing ([CIQC](https://ciqc.berkeley.edu/)) quantum gathering. Such a wonderful way to integrate myself in a great quantum community. <img src="/images/CIQC_site.png" alt="Addressing connectivity challenges in quantum hardware">
+* **7/19/2023** It has been a pleasure attending the [QuNeW workshop](https://quantumnetworksworkshop2.splashthat.com/) where I presented preliminary results on color centers in silicon. It was really nice networking with many experts in my first quantum networking workshop/conference.
+* **5/22/2023** I was awarded [2023 Rising Star in Physics](https://physics.berkeley.edu/2023-rising-stars-physics-workshop). Thank you, all the committe members, for putting together a wonderful workshop!
 * **4/3/2023** I will be visiting Columbia University and giving a seminar "Superconducting Circuit Architectures Based on Light-Matter Interactions".
 * **3/28/2023** I have joined UC Berkeley as a [Miller research fellow](https://miller.berkeley.edu/about) working with  [Alp Sipahigil](https://quantumdevices.berkeley.edu/). 
 * **2/21/2023** I have passed my thesis defense with the title "Superconducting circuit architectures based on waveguide quantum electromagnetics" and become Dr. Zhang! 
