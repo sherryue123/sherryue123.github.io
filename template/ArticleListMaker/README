@@ -1,6 +1,0 @@
-Bibliography Guidance:
-A LOT OF ADDITIONAL INFO IS ADDED BY HAND TO REFERENCES AFTER THE FACT! DON'T BLINDLY OVERWRITE PUBLICATIONS.JSON!
-INSTEAD: add an image, and the url!
-
-OLD STUFF:
-		{"type":"GS","LastName": "Agrawal", "FirstName": "Ankur",  "title": "PH335 Researcher", "room": "GCIS ESB06",  "phone": "773.702.8928", "email": "ankuragrawal@uchicago.edu","degrees":["M.T., Indian Institute of Technology, 2016"],"former":"yes"},
