@@ -1,0 +1,272 @@
+	{%- set thispage_title = 'Members of The Simon Lab at The University of Chicago' -%}
+	{%- set thispage_description = 'Current members of the Simon Lab include graduate students, undergraduates, postdoctoral scholars, and summer researchers.' -%}
+    {%- include 'header.html' -%}
+
+    <!-- Page Content -->
+    <div class="container" itemscope itemtype="http://schema.org/EducationalOrganization">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Members
+                    <small>of the <span itemprop="name"> Simon Lab</span><span class="hidden-xs"> at <span itemprop="parentOrganization">The University of Chicago </span></span></small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{{DirectoryPrefix}}index.html">Simon Lab</a>
+                    </li>
+                    <li class="active">Group Members</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Intro Content -->
+        
+        <!-- Team Members -->
+        <div class="row">
+		<!-- PI -->
+		 <div class="col-sm-6 col-md-4 col-lg-3 text-center" id="{{PI.FirstName}}{{PI.LastName}}"  itemprop="founder" itemscope itemtype="http://schema.org/Person">
+                <div class="thumbnail"  >
+							{%- if PI.about is defined -%} <a href="people/{{PI.url}}"> {%- endif -%}
+							{%- if PI.img is defined -%}
+								<img itemprop="image"  class="img-responsive people-img  center-graphic" src="graphics/people/{{PI.img}}" alt="{{PI.FirstName}} {% if PI.MiddleName is defined -%} {{PI.MiddleName}} {% endif -%} {{PI.LastName}}">
+							{%- else -%}
+								<img itemprop="image"  class="img-responsive people-img  center-graphic" src="graphics/people/{{PI.FirstName}}{{PI.LastName}}.jpg" alt="{{PI.FirstName}} {% if PI.MiddleName is defined -%} {{PI.MiddleName}} {% endif -%} {{PI.LastName}}">
+							{%- endif -%}
+							{%- if PI.about is defined -%} </a> {%- endif -%}
+                    <div class="caption">
+                        <h3>
+							{%- if PI.about is defined -%} <a itemprop="url" href="people/{{PI.url}}"> {%- endif -%}
+							<span itemprop="name">{{PI.FirstName}} {% if PI.MiddleName is defined -%} {{PI.MiddleName}} {% endif -%} {{PI.LastName}}</span>
+							{%- if PI.about is defined -%} </a> {%- endif -%}
+							<br>
+                            <small><span itemprop="jobtitle">{{PI.title}} </span></small>
+                        </h3>
+                        <p> {%- for degree in PI.degrees -%}
+							{{degree}}
+							{%- if not loop.last -%} <br> {%- endif -%}
+							{%- endfor -%}
+						</p>
+						{%- if PI.pages is defined -%}
+							<p>
+							{%- for page in PI.pages -%}  <i class="fa fa-external-link"></i> <a href="{{page.url}}">{{page.name}}</a> {%- if not loop.last -%} <br> {%- endif -%} {%- endfor -%}
+							</p>
+                        {%- endif -%}
+						
+						
+                        <p>
+						{%- if PI.room is defined -%} <i class="fa fa-building"></i> {{PI.room}}	<br>{%- endif -%}
+						{%- if PI.email is defined -%}<i class="fa fa-envelope"></i> <a href="mailto:{{PI.email}}"><span itemprop="email">  {{PI.email}} </span> </a> <br>{%- endif -%}
+						{%- if PI.phone is defined -%}<i class="fa fa-phone"></i> <span itemprop="telephone"> {{PI.phone}} </span>{%- endif -%}
+						</p>
+						<meta itemprop="description" content="{{PI.FirstName}} {% if PI.MiddleName is defined -%} {{PI.MiddleName}} {% endif -%} {{PI.LastName}}, {{PI.title}} at The University of Chicago">
+                        <ul class="list-inline">
+                        {%- if PI.facebook is defined -%}
+                            <li><a href="{{PI.facebook}}"><i class="fa fa-2x fa-facebook-square"></i></a>
+                            </li>
+                        {%- endif -%}
+						{%- if PI.linkedin is defined -%}
+                            <li><a href="{{PI.linkedin}}"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                            </li>
+                        {%- endif -%}
+						{%- if PI.googlescholar is defined -%}
+                            <li><a href="{{PI.googlescholar}}"><i class="fa fa-2x fa-google-plus-square"></i></a>
+                            </li>
+                        {%- endif -%}
+						{%- if PI.CV is defined -%}
+                            <li><a href="CVs/{{PI.CV}}"><i class="fa fa-2x fa-CV-square"></i></a>
+                            </li>
+						{%- endif -%}
+						{%- if PI.web is defined -%}
+							<li><a href="{{PI.web}}"><i class="fa fa-2x fa-WWW-square"></i></a>
+							</li>
+						{%- endif -%}
+
+							</ul>
+                    </div>
+                </div>
+            </div>
+		<!-- Admin -->
+			<div class="col-sm-6 col-md-4 col-lg-3 text-center" id="{{Admin.FirstName}}{{Admin.LastName}}" itemscope itemprop="employee" itemtype="http://schema.org/Person">
+                <div class="thumbnail" >
+							{%- if Admin.img is defined -%}
+								<img itemprop="image"  class="img-responsive center-graphic people-img" src="graphics/people/{{Admin.img}}" alt="{{Admin.FirstName}} {% if Admin.MiddleName is defined -%} {{Admin.MiddleName}} {% endif -%} {{Admin.LastName}}">
+							{%- else -%}
+								<img itemprop="image"  class="img-responsive center-graphic people-img" src="graphics/people/{{Admin.FirstName}}{{Admin.LastName}}.jpg" alt="{{Admin.FirstName}} {% if Admin.MiddleName is defined -%} {{Admin.MiddleName}} {% endif -%} {{Admin.LastName}}">
+							{%- endif -%}
+                    <div class="caption">
+                        <h3><span itemprop="name">{{Admin.FirstName}} {% if Admin.MiddleName is defined -%} {{Admin.MiddleName}} {% endif -%} {{Admin.LastName}} </span><br>
+                            <small><span itemprop="jobtitle">{{Admin.title}}</span></small>
+                        </h3>
+						<p>
+						{%- if Admin.room is defined -%} <p><i class="fa fa-building"></i> {{Admin.room}}	<br>{%- endif -%}
+                        {%- if Admin.email is defined -%}<i class="fa fa-envelope"></i> <a href="mailto:{{Admin.email}}"> <span itemprop="email">{{Admin.email}}</span> </a> <br>{%- endif -%}
+                        {%- if Admin.phone is defined -%}<i class="fa fa-phone"></i>  <span itemprop="telephone">{{Admin.phone}}</span>{%- endif -%}
+						</p>
+						<meta itemprop="description" content="{{Admin.FirstName}} {% if Admin.MiddleName is defined -%} {{Admin.MiddleName}} {% endif -%} {{Admin.LastName}}, {{Admin.title}} at The University of Chicago">
+                       {%- if Admin.caption is defined -%}
+					   <p>{{Admin.caption}}</p>
+					   {%- endif -%}
+                    </div>
+                </div>
+            </div>
+			<div class="clearfix visible-sm-block"> </div>
+			<!-- Students -->
+
+		{%- for student in Students|sort(attribute='LastName') if student.former is not defined -%}
+				<div class="col-sm-6 col-md-4 col-lg-3 text-center" 
+						{%- if student.tag is defined -%} id="{{student.tag}}" {%- else -%} id="{{student.FirstName}}{{student.LastName}}" {%- endif -%}
+						itemscope itemprop="employee" itemtype="http://schema.org/Person" >
+						<div class="thumbnail"  >
+							{%- if student.about is defined -%}
+								<a itemprop="url" href="people/{{student.url}}">
+							{%- endif -%}
+							<div>
+							{%- if student.img is defined -%}
+								<img itemprop="image"  class="img-responsive center-graphic people-img" src="graphics/people/{{student.img}}" alt="{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}">
+							{%- else -%}
+								<img itemprop="image"  class="img-responsive center-graphic people-img" src="graphics/people/{{student.FirstName}}{{student.LastName}}.jpg" alt="{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}">
+							{%- endif -%}
+							</div>
+							{%- if student.about is defined -%}
+								</a>
+							{%- endif -%}
+							<div class="caption">
+								<h3> {%- if student.about is defined -%} <a href="people/{{student.url}}"> {%- endif -%} 
+								<span itemprop="name">{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}} </span>
+								{%- if student.about is defined -%} </a> 	{%- endif -%} <br>
+									<small><span itemprop="jobtitle">{{student.title}}</span></small>
+								</h3>
+								{%- if student.degrees is defined -%}
+								<p> {%- for degree in student.degrees -%}
+									{{degree}}
+									{%- if not loop.last -%} <br> {%- endif -%}
+									{%- endfor -%}
+								</p>
+								{%- endif -%}
+								<p>
+								{%- if student.room is defined -%} <i class="fa fa-building"></i> {{student.room}}	<br>{%- endif -%}
+								{%- if student.email is defined -%}<i class="fa fa-envelope"></i> <a href="mailto:{{student.email}}"> <span itemprop="email">{{student.email}}</span> </a> <br>{%- endif -%}
+								{%- if student.phone is defined -%}<i class="fa fa-phone"></i> <span itemprop="telephone">{{student.phone}}</span>{%- endif -%}
+								</p>
+								<meta itemprop="description" content="{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}, {{student.title}} at The University of Chicago">
+								<ul class="list-inline">
+								{%- if student.facebook is defined -%}
+									<li><a href="{{student.facebook}}"><i class="fa fa-2x fa-facebook-square"></i></a>
+									</li>
+								{%- endif -%}
+								{%- if student.linkedin is defined -%}
+									<li><a href="{{student.linkedin}}"><i class="fa fa-2x fa-linkedin-square"></i></a>
+									</li>
+								{%- endif -%}
+								{%- if student.googlescholar is defined -%}
+									<li><a href="{{student.googlescholar}}"><i class="fa fa-2x fa-google-plus-square"></i></a>
+									</li>
+								{%- endif -%}
+								{%- if student.CV is defined -%}
+									<li><a href="CVs/{{student.CV}}"><i class="fa fa-2x fa-CV-square"></i></a>
+									</li>
+								{%- endif -%}
+								{%- if student.web is defined -%}
+									<li><a href="{{student.web}}"><i class="fa fa-2x fa-WWW-square"></i></a>
+									</li>
+								{%- endif -%}
+
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
+					{%- if (loop.index +2) is divisibleby 4 -%}  <div class="clearfix visible-lg-block"> </div> {%- endif -%}
+					{%- if (loop.index +2)  is divisibleby 3 -%}  <div class="clearfix visible-md-block"> </div> {%- endif -%}
+					{%- if (loop.index +2)  is divisibleby 2 -%}  <div class="clearfix visible-sm-block"> </div> {%- endif -%}
+		{%- endfor -%}
+		
+		
+		</div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Alumni and Former Members <small> of the Simon Lab</small></h2>
+            </div>
+		</div>
+		
+		<div class="row truncated-row-tall">
+		
+			<!-- Former Students -->
+		{%- for student in Students|sort(attribute='LastName') if student.former is defined -%}
+          {%- if loop.index < 5 -%}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center 
+					{%- if loop.index > 1 %} hidden-xs {% endif -%}
+					{%- if loop.index > 2 %} hidden-sm {% endif -%}
+					{%- if loop.index > 3 %} hidden-md {% endif -%}
+					" >
+					<div class="thumbnail" {%- if student.tag is defined -%} id="{{student.tag}}" {%- else -%} id="{{student.FirstName}}{{student.LastName}}" {%- endif -%} >
+							{%- if student.img is defined -%}
+								<img  class="img-responsive people-img  center-graphic " src="graphics/people/{{student.img}}" alt="{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}">
+							{%- else -%}
+								<img  class="img-responsive people-img  center-graphic" src="graphics/people/{{student.FirstName}}{{student.LastName}}.jpg" alt="{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}">
+							{%- endif -%}
+							<div class="caption">
+								<h3>{{student.FirstName}} {% if student.MiddleName is defined -%} {{student.MiddleName}} {% endif -%} {{student.LastName}}<br>
+									<small>{{student.title}}</small>
+								</h3>
+								{%- if student.degrees is defined -%}
+								<p> {%- for degree in student.degrees -%}
+									{{degree}}
+									{%- if not loop.last -%} <br> {%- endif -%}
+									{%- endfor -%}
+								</p>
+								{%- endif -%}
+								<p>{{student.caption}} </a> </p>
+								</ul>
+							</div>
+						</div>
+					</div>
+			{%- endif -%}
+		{%- endfor -%}
+
+			
+		<div class="transparent-fade"> 
+			<a class="transparent-fade-btn-overlay btn btn-primary-ghost space-below" href="FormerGroupMembers.html">See All Alumni <i class="fa fa-angle-right"></i></a>
+		</div>
+
+
+		</div>
+        <!-- Our Affiliations -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Affiliations</h2>
+            </div>
+			{%- for affil in affiliations -%}
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 
+				{% if loop.index == 10 %} col-sm-offset-4 col-md-offset-0 col-lg-offset-0 {% endif %}			
+				{% if loop.index ==7 %} col-md-offset-2 col-lg-offset-2 {% endif %}
+			">				{%- if affil.url is defined -%}
+					<a href="{{affil.url}}">
+				{%- endif -%}
+				{%- if affil.img is defined -%}
+					<img class="img-responsive funding-graphic" src="graphics/affiliations/{{affil.img}}" alt="{{affil.name}}">
+					{%- else -%}
+					<p> {{affil.name}} </p>
+				{%- endif -%}
+				{%- if affil.url is defined -%}
+					</a>
+				{%- endif -%}
+			</div>
+					{%- if loop.index is divisibleby 6 -%}  <div class="clearfix visible-lg-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 6 -%}  <div class="clearfix visible-md-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 3 -%}  <div class="clearfix visible-sm-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 2 -%}  <div class="clearfix visible-xs-block"> </div> {%- endif -%}
+			{%- endfor -%}
+        </div>
+        <!-- /.row -->
+
+      </div>  
+    {%- include 'footer.html' -%}
+
+
+</body>
+
+</html>

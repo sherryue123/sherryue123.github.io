@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Xueyue (Sherry) Zhang">
+	<meta name="Description" content="{{thispage_description}}" />
+	<meta name="Keywords" content="Quantum devices and their applications, superconducting qubits, solid state spins, quantum light-matter interaction, metamaterials, quantum many-body dynamics, topological photonics, quantum information, quantum networking"/>
+	<meta name="Keywords" content="Xueyue (Sherry) Zhang" />
+	<meta name="robots"  content="index,follow">
+	<meta http-equiv="cache-control" content="public,maxage=432000">
+	<title>{{thispage_title}}</title> 	
+	{% if thispage_extraheader is defined -%} {{thispage_extraheader}} {%- endif -%} 
+    <!-- Bootstrap Core CSS -->
+    <link href="{{DirectoryPrefix}}css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{DirectoryPrefix}}css/simonlab.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="{{DirectoryPrefix}}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--  Alegreya Sans Font from GoogleFonts -->
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700,800,900,400italic,500italic,700italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	  </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{DirectoryPrefix}}index.html">
+				<img class="img-responsive" src="{{DirectoryPrefix}}graphics/SimonLab.png" alt="Simon Lab">
+				</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{{DirectoryPrefix}}index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{DirectoryPrefix}}research.html">Research</a>
+                    </li>
+                    <li>
+                        <a href="{{DirectoryPrefix}}GroupMembers.html">People</a>
+                    </li>
+                    <li>
+                        <a href="{{DirectoryPrefix}}publications.html">Publications</a>
+					</li>
+                    <li>
+                        <a href="{{DirectoryPrefix}}news.html">News</a>
+                    </li>
+                    <!-- <li>
+                        <a href="{{DirectoryPrefix}}FPGA.html">FPGA Tools</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="{{DirectoryPrefix}}contact.html">Contact</a>
+                    </li> -->
+                    <li>
+                        <a href="{{DirectoryPrefix}}applynow.html">Openings</a>
+                    </li>
+                    <!-- <li>
+                        <a href="{{DirectoryPrefix}}Movies.html">Movies</a>
+                    </li>  -->
+                    <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						<li>
+						<a href="{{DirectoryPrefix}}applynow.html">Apply now!</a>
+						</li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	{%- if header_banner is defined -%}
+	<header class="header-banner" style="background-image: url({{header_banner}});">
+	</header>
+	{%- endif -%}

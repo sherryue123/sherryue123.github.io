@@ -1,0 +1,2022 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     71342,       2014]
+NotebookOptionsPosition[     60806,       1764]
+NotebookOutlinePosition[     61160,       1780]
+CellTagsIndexPosition[     61117,       1777]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["Basic Mathematica Tutorial\n", "Title"],
+ StyleBox["Jon Simon", "Title",
+  FontSize->24]
+}], "Text",
+ CellChangeTimes->{{3.7332181419167747`*^9, 3.733218159247919*^9}, {
+  3.7333471657509823`*^9, 3.73334716642063*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+First Things first, let\[CloseCurlyQuote]s learn to make some variables. We \
+will create a variable called x and set it to 41:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733218205809778*^9, 3.733218230946971*^9}, 
+   3.733218296316655*^9, 3.733218425044567*^9}],
+
+Cell[BoxData[
+ RowBox[{"x", "=", "41"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7332182165734377`*^9, 3.733218217042245*^9}, 
+   3.733218297842312*^9, 3.7332184250447483`*^9}],
+
+Cell["\<\
+To make the above cell \
+\[OpenCurlyDoubleQuote]evaluate\[CloseCurlyDoubleQuote] (that is, execute as \
+code), you must press SHIFT-ENTER will on top of that cell; just pressing \
+ENTER will insert a newline! TRY BOTH!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.73321823608661*^9, 3.733218280586046*^9}, 
+   3.733218425044827*^9}],
+
+Cell["\<\
+Notice that Mathematica returned 41 as output. This occurred because we did \
+not put a semicolon at the end of the line, which tells mathematica to \
+SUPPRESS the result of the computation, like so:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733218289756732*^9, 3.733218363664323*^9}, 
+   3.7332184250449123`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "=", "37"}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7332183406793222`*^9, 3.73321834259293*^9}, 
+   3.733218425044997*^9}],
+
+Cell[TextData[{
+ "Running that code does ",
+ StyleBox["not",
+  FontSlant->"Italic"],
+ " result in any return value!"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733218344463216*^9, 3.733218378186167*^9}, 
+   3.733218425045106*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Lets jump right into using mathematica in more powerful ways. Suppose I \
+want to compute an indefinite integral of x ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}], "."}], TraditionalForm]]],
+ " Run the next line of code:"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218436374248*^9, 3.733218516520274*^9}, 
+   3.7332186988585*^9, 3.733218932133155*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}]}], ",", "x"}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218499839603*^9, 3.733218507325933*^9}, 
+   3.733218932133347*^9}],
+
+Cell[TextData[{
+ StyleBox["This is our first lesson in the frustrations of Mathematica.",
+  FontWeight->"Bold"],
+ " The above code did not work, but you can see that there are 41\
+\[CloseCurlyQuote] s where there should be x\[CloseCurlyQuote] s! This says \
+that x has been set to 41, which is actually our fault :( \nThere are two \
+ways out of this dilemma.\n(1) When you have a confusing problem, the first \
+thing to do is reset Mathematica\[CloseCurlyQuote]s memory by going up to the \
+EVALUATION menu, and clicking QUIT KERNEL. This makes Mathematica forget \
+about all prior assignments and start from scratch.\n(2) If you do not want \
+mathematica to forget about everything, but just about, say, x, then try:"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.7332185279719667`*^9, 3.733218708145625*^9}, 
+   3.733218932133457*^9}],
+
+Cell[BoxData[
+ RowBox[{"x", "=."}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218709216717*^9, 3.733218712809248*^9}, 
+   3.733218932133581*^9}],
+
+Cell["\<\
+Please choose one of these options, implement it, and then try again:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218714671113*^9, 3.7332187375813293`*^9}, 
+   3.733218932133649*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}]}], ",", "x"}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{3.733218932133748*^9}],
+
+Cell["\<\
+Now it should have worked! Let\[CloseCurlyQuote]s examine that line of code a \
+bit more carefully. Integrate takes two arguments, the first of which is the \
+function to integrate, and the second of which is the variable of \
+integration. If you want to perform a definite integral, try this form:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.7332187527410107`*^9, 3.733218810101131*^9}, 
+   3.7332189321338263`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "b"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218814926506*^9, 3.733218816489234*^9}, 
+   3.7332189321339197`*^9}],
+
+Cell[TextData[{
+ "Suppose we want to verify that ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], " ", 
+   RowBox[{"Cos", "[", 
+    SuperscriptBox["x", "2"], "]"}]}]],
+  CellChangeTimes->{3.733218854175005*^9}],
+ " is actually the anti-derivative of x ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Sin", "[", 
+    SuperscriptBox["x", "2"], "]"}], TraditionalForm]]],
+ ", let\[CloseCurlyQuote]s ask Mathematica to take a derivative:"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.733218841167811*^9, 3.733218878620631*^9}, 
+   3.733218932134058*^9}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "2"]}], " ", 
+    RowBox[{"Cos", "[", 
+     SuperscriptBox["x", "2"], "]"}]}], ",", "x"}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.7332188796878853`*^9, 3.733218881337845*^9}, 
+   3.7332189321341476`*^9}],
+
+Cell[TextData[{
+ "Another interesting aside for you : How did I generate ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]]],
+ ", rather than x^2? The trick is to press ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"CTRL", "-", "6"}],
+    FontWeight->"Bold"], TraditionalForm]]],
+ " rather than ",
+ StyleBox["SHIFT-6; ",
+  FontWeight->"Bold"],
+ "this generates a raised exponent. A similar trick works for ",
+ StyleBox["CTRL-/, ",
+  FontWeight->"Bold"],
+ "which produces nice looking fractions, and for ",
+ StyleBox["CTRL-2",
+  FontWeight->"Bold"],
+ ", which produces a nice square root. More generally, these formatting tools \
+can be accessed under the PALETTES menu at the top of the screen, but they \
+are purely aesthetic!"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.7332190601454077`*^9, 3.733219247378834*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Now imagine that I would like to know the Taylor expansion of x ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Cos", "[", 
+    SuperscriptBox["x", "2"]}], TraditionalForm]]],
+ "] about x=0:"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.},
+ CellChangeTimes->{{3.7332189507606983`*^9, 3.733218968152112*^9}, {
+   3.7332193084885674`*^9, 3.733219348076388*^9}, {3.733219497153222*^9, 
+   3.7332194982127247`*^9}, 3.733220405613168*^9, {3.733347162428112*^9, 
+   3.733347162917741*^9}}],
+
+Cell[BoxData[
+ RowBox[{"u", "=", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"x", " ", 
+     RowBox[{"Cos", "[", 
+      SuperscriptBox["x", "2"], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.},
+ CellChangeTimes->{{3.733219330133966*^9, 3.7332193404081173`*^9}, {
+   3.733219515595894*^9, 3.7332195158265953`*^9}, {3.7332198511485357`*^9, 
+   3.7332198515029593`*^9}, 3.733220405613494*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["It", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["will", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["be", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["awkward", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["to", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["work", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["with", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], " ", 
+     StyleBox["this", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["expression", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["with", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["that", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["extra", "Text",
+      FontColor->GrayLevel[0]], " ", 
+     SuperscriptBox[
+      RowBox[{"O", "[", "x", "]"}], "6"], " ", 
+     StyleBox["on", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["the", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     RowBox[{
+      StyleBox[
+       StyleBox["end", "Text",
+        FontColor->GrayLevel[0]], "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], 
+      StyleBox[".", "Text",
+       FontColor->GrayLevel[0]], 
+      StyleBox[" ", "Text",
+       FontColor->GrayLevel[0]], 
+      StyleBox[
+       RowBox[{
+        StyleBox[
+         StyleBox[
+          StyleBox["T", "Text",
+           FontWeight->"Plain",
+           FontColor->GrayLevel[0]], "Text",
+          FontColor->GrayLevel[0]], "Text",
+         FontWeight->"Plain",
+         FontColor->GrayLevel[0]], "he"}]]}], " ", 
+     StyleBox["Normal", "Text",
+      FontWeight->"Bold",
+      FontColor->GrayLevel[0]], " ", 
+     StyleBox["command", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["removes", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox["it", "Text",
+      FontColor->GrayLevel[0]]}],
+    FontWeight->"Plain"], 
+   StyleBox[",",
+    FontWeight->"Plain"], 
+   StyleBox[" ",
+    FontWeight->"Plain"], 
+   RowBox[{
+    RowBox[{
+     StyleBox["and", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["can", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["be", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["implemented", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["either", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox["as", "Text",
+      FontWeight->"Plain",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{
+         RowBox[{"x", " ", 
+          RowBox[{"Cos", "[", "x", "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}], "]"}],
+      FontWeight->"Bold"], 
+     StyleBox[" ",
+      FontWeight->"Bold"], 
+     StyleBox[
+      StyleBox["or", "Text",
+       FontWeight->"Plain",
+       FontColor->GrayLevel[0]], "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[" ", "Text",
+      FontColor->GrayLevel[0]], 
+     StyleBox[
+      StyleBox[
+       StyleBox[
+        StyleBox["u", "Text",
+         FontColor->GrayLevel[0]], "Text",
+        FontWeight->"Plain"], "Text",
+       FontColor->GrayLevel[0]], "Text",
+      FontColor->GrayLevel[0]]}], 
+    StyleBox[
+     StyleBox[
+      StyleBox[
+       StyleBox["//", "Text",
+        FontWeight->"Plain"], "Text",
+       FontWeight->"Plain"], "Text",
+      FontWeight->"Plain"], "Text",
+     FontColor->GrayLevel[0]], 
+    StyleBox[
+     RowBox[{"Normal", "  ", "Try", " ", 
+      RowBox[{"one", "!"}]}],
+     FontWeight->"Bold"]}]}], "Text",
+  FontColor->GrayLevel[0]]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.},
+ CellChangeTimes->{{3.733219504976715*^9, 3.7332195525154877`*^9}, {
+   3.733219841480836*^9, 3.733219868691203*^9}, {3.7332199465875397`*^9, 
+   3.7332199469104567`*^9}, {3.733220189370351*^9, 3.7332202638728437`*^9}, 
+   3.733220405613731*^9}],
+
+Cell["\<\
+Series takes two arguments, the first is the function you\[CloseCurlyQuote]d \
+like the taylor expansion of, and the second argument is a list whose first \
+element is what variable to taylor expand with respect to, the second \
+argument is what value of the variable to taylor expand around, and the third \
+argument to what order in the variable to compute the taylor expansion.\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.},
+ CellChangeTimes->{{3.733220416352989*^9, 3.733220492213044*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "So this brings us to a new question: ",
+ StyleBox["what is a list?!",
+  FontSlant->"Italic"],
+ StyleBox["\n   A list is an ordered array of numbers, variables, and other \
+lists. Here are some examples. Go ahead and execute them!",
+  FontWeight->"Bold",
+  FontSlant->"Italic"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.},
+ CellChangeTimes->{{3.733220499324462*^9, 3.7332205981115217`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "=", "14"}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"THIS", " ", "IS", " ", "A", " ", 
+    RowBox[{"COMMENT", "!"}], " ", "IT", " ", "DOES", " ", "NOT", " ", 
+    "EVALUATE", " ", "TO", " ", "ANYTHING", " ", "AND", " ", "LETS", " ", 
+    "ME", " ", "BE", " ", 
+    RowBox[{"VERBOSE", "!"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l1", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l2", "=", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "4"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l3", "=", 
+   RowBox[{"{", 
+    RowBox[{"jon", ",", "4", ",", "31"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l4", "=", 
+   RowBox[{"{", 
+    RowBox[{"l1", ",", "37", ",", "l2", ",", "l2"}], "}"}]}], ";"}]}], "Input",\
+
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.},
+ CellChangeTimes->{{3.7332205558457413`*^9, 3.733220650935521*^9}, {
+  3.733220767352934*^9, 3.733220801124474*^9}}],
+
+Cell["\<\
+It is instructive to ask Mathematica what  each list is. To do that, just \
+enter the name of a list below, and evaluate.   Try it for each list! Notice \
+that l2 contains the value of x, rather than its name! l3, on the other hand, \
+just contains \[OpenCurlyDoubleQuote]jon\[CloseCurlyDoubleQuote], since that \
+variable has not been assigned a value. l4 contains full lists as elements.\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.},
+ CellChangeTimes->{{3.7332206033026133`*^9, 3.733220775789331*^9}, {
+   3.733220806769288*^9, 3.733220808005992*^9}, 3.7332211382742*^9}],
+
+Cell[TextData[{
+ "If I want to know what the third element of l4 is, I type  ",
+ StyleBox["l4[[3]] ",
+  FontWeight->"Bold"],
+ " Try it!"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.},
+ CellChangeTimes->{{3.7332208228016768`*^9, 3.733220859806736*^9}, {
+   3.733220903196023*^9, 3.73322091131702*^9}, 3.733221138274407*^9}],
+
+Cell[TextData[{
+ "Suppose that what I\[CloseCurlyQuote]d actually like to do is ",
+ StyleBox["change",
+  FontSlant->"Italic"],
+ " the value of l4[[3]] to 37. I type ",
+ StyleBox["l4[[3]] = 37 ",
+  FontWeight->"Bold"],
+ "Try that, and then ask mathematica to print out l4 again."
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.},
+ CellChangeTimes->{{3.733220867910725*^9, 3.733220916610896*^9}, {
+  3.733221091396377*^9, 3.733221138274543*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "If I have a complicated expression and  I want to see if it can be \
+simplified, the Mathematica commands are ",
+ StyleBox["Simplify",
+  FontWeight->"Bold"],
+ ", and ",
+ StyleBox["FullSimplify",
+  FontWeight->"Bold"],
+ ", depending upon how hard I want Mathematica to try. TRY IT! [",
+ StyleBox["Side Note: Mathematica is case-sensitive!!!",
+  FontSlant->"Italic"],
+ "]",
+ StyleBox[" ",
+  FontSlant->"Italic"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10004.},
+ CellChangeTimes->{{3.733221186616302*^9, 3.73322125496918*^9}, 
+   3.73322135092702*^9}],
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", 
+    RowBox[{"4", "x"}], " ", "+", "4"}], 
+   RowBox[{"x", "+", "2"}]], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10004.},
+ CellChangeTimes->{{3.733221237354669*^9, 3.7332213017098913`*^9}, 
+   3.733221350927279*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Suppose I have a symbolic expression that I want to evaluate with \
+particular values of the variables. Try the line below. ",
+ StyleBox["[Side Notes: Mathematica converts ",
+  FontSlant->"Italic"],
+ StyleBox["->",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" into ",
+  FontSlant->"Italic"],
+ StyleBox["\[Rule]",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[";",
+  FontSlant->"Italic"],
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox["to generate a \[Nu], type ",
+  FontSlant->"Italic"],
+ StyleBox["ESCAPE",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" nu ",
+  FontSlant->"Italic"],
+ StyleBox["ESCAPE",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox["]",
+  FontSlant->"Italic"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.},
+ CellChangeTimes->{{3.733221373064827*^9, 3.733221388015587*^9}, {
+   3.733221535424344*^9, 3.733221629587741*^9}, 3.733221698853691*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Nu]", 
+   FractionBox[
+    RowBox[{"1", "+", 
+     RowBox[{"v", "/", "c"}]}], 
+    RowBox[{"1", "-", 
+     RowBox[{"v", "/", "c"}]}]]}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"v", "->", 
+     RowBox[{
+      SuperscriptBox["10", "7"], 
+      RowBox[{"m", "/", "s"}]}]}], ",", 
+    RowBox[{"c", "\[Rule]", 
+     RowBox[{"3", " ", 
+      SuperscriptBox["10", "8"], 
+      RowBox[{"m", "/", "s"}]}]}], ",", 
+    RowBox[{"\[Nu]", "\[Rule]", 
+     RowBox[{"100.", " ", "hz"}]}]}], "}"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.},
+ CellChangeTimes->{{3.733221389478376*^9, 3.7332213987076*^9}, {
+   3.733221469501452*^9, 3.733221528682374*^9}, 3.733221698853931*^9}],
+
+Cell["\<\
+The code within the the braces is a list of \
+\[OpenCurlyDoubleQuote]replacement rules,\[CloseCurlyDoubleQuote] and the /. \
+tells mathematica to apply the replacement rules after the /. the expression \
+before the /.\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.},
+ CellChangeTimes->{{3.733346887709626*^9, 3.73334690152908*^9}, 
+   3.733347384311367*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Suppose I want to make a plot:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733222447922056*^9, 3.733222477024132*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], 
+    RowBox[{"Cos", "[", 
+     SuperscriptBox["x", "2"], "]"}], 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "1"}], "4"], 
+      SuperscriptBox["x", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "15"}], ",", "15"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733222350640003*^9, 3.733222391184043*^9}, 
+   3.7332224770246773`*^9}],
+
+Cell["\<\
+That plot was ugly. Let\[CloseCurlyQuote]s make sure that mathematica plots \
+everything!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733222409622164*^9, 3.733222421967002*^9}, 
+   3.7332224770248737`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], 
+    RowBox[{"Cos", "[", 
+     SuperscriptBox["x", "2"], "]"}], 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "1"}], "4"], 
+      SuperscriptBox["x", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "15"}], ",", "15"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733222424259821*^9, 3.7332224282767*^9}, 
+   3.733222477025017*^9}],
+
+Cell["Much better!", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.7332224324907084`*^9, 3.7332224358975477`*^9}, 
+   3.7332224770251017`*^9}],
+
+Cell["Suppose I want to make a 3D Plot:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733259045137229*^9, 3.733259052468175*^9}, 
+   3.733259153346614*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["x", "2"], "+", 
+         SuperscriptBox["y", "2"]}], ")"}]}], "/", "10"}], "]"}], 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733259055270708*^9, 3.73325909357052*^9}, 
+   3.733259153346987*^9}],
+
+Cell["This is too jagged! Let\[CloseCurlyQuote]s add more points to the \
+plot:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.7332591096036386`*^9, 3.7332591199256067`*^9}, 
+   3.733259153347172*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["x", "2"], "+", 
+         SuperscriptBox["y", "2"]}], ")"}]}], "/", "10"}], "]"}], 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+   RowBox[{"PlotPoints", "\[Rule]", "40"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733259122934308*^9, 3.733259153347443*^9}}],
+
+Cell["That is very pretty!", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.},
+ CellChangeTimes->{{3.733259133066196*^9, 3.7332591533476477`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Suppose I want to find the eigenvectors and eigenvalues of a matrix. First \
+let\[CloseCurlyQuote]s define the matrix as a list of lists:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.7332216415862513`*^9, 3.7332216988540173`*^9}, {
+   3.7332225057351837`*^9, 3.733222531029229*^9}, 3.7332233163740053`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"M", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "2", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       RowBox[{"1", "/", "2"}]}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222533527171*^9, 3.733222563629512*^9}, 
+   3.733223316374235*^9}],
+
+Cell["Now Let\[CloseCurlyQuote]s compute its eigenvectors and eigenvalues:", \
+"Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222566379991*^9, 3.733222576740144*^9}, 
+   3.733223316374325*^9}],
+
+Cell[BoxData[
+ RowBox[{"Eigensystem", "[", "M", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222577593804*^9, 3.7332225795112877`*^9}, 
+   3.733223316374426*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2"}], ",", "2", ",", 
+     FractionBox["1", "2"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{3.733222579875575*^9, 3.733223316374547*^9}],
+
+Cell["\<\
+The first element of the result is a list of eigenvalues, while the second \
+element of the result is a list of corresponding eigenvectors.\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.7332226580109243`*^9, 3.733222684727669*^9}, 
+   3.733223316374634*^9}],
+
+Cell["\<\
+It is sometimes better to ask Mathematica not to do analytic computations by \
+making the argument numeric. To do this, we add the N[] command around M, \
+which turns it into a numeric matrix:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222590194766*^9, 3.733222625489415*^9}, 
+   3.733222691185012*^9, 3.7332233163746967`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"V", "=", 
+  RowBox[{"N", "[", "M", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Eigensystem", "[", "V", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.7332226264165077`*^9, 3.733222637300911*^9}, 
+   3.733223316374791*^9}],
+
+Cell["\<\
+Notice that while the eigenvalues are the same whether we compute \
+analytically or numerically, the eigenvectors are differently normalized!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222646831629*^9, 3.733222655020159*^9}, {
+   3.733222694224612*^9, 3.7332227129226027`*^9}, 3.733223316375108*^9}],
+
+Cell["\<\
+Mathematica is also capable of computing eigenvectors/values of totally \
+symbolic matrices, though these can be extremely messy. \
+Let\[CloseCurlyQuote]s pick a simple example, corresponding to two masses \
+coupled together by springs, each separately connected to a wall:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.7332229961786213`*^9, 3.73322306964821*^9}, 
+   3.733223316375169*^9}],
+
+Cell[BoxData[
+ RowBox[{"EVs", "=", 
+  RowBox[{"Eigensystem", "[", 
+   RowBox[{
+    RowBox[{"Inverse", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"m1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "m2"}], "}"}]}], "}"}], "]"}], ".", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"k", "+", "kc"}], ",", 
+        RowBox[{"-", "kc"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "kc"}], ",", 
+        RowBox[{"k", "+", "kc"}]}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.7332230237613993`*^9, 3.733223103724012*^9}, 
+   3.733223316375292*^9}],
+
+Cell["\<\
+if we plug in some actual values it will be clearer what is going on:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733223108452726*^9, 3.7332231162133303`*^9}, {
+   3.733223154910345*^9, 3.73322316040065*^9}, 3.733223316375368*^9}],
+
+Cell[BoxData[
+ RowBox[{"EVs", "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"k", "\[Rule]", "1."}], ",", 
+    RowBox[{"m1", "\[Rule]", "1."}], ",", 
+    RowBox[{"m2", "\[Rule]", "1."}], ",", 
+    RowBox[{"kc", "\[Rule]", ".1"}]}], "}"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733223117348209*^9, 3.733223137138567*^9}, 
+   3.7332233163754663`*^9}],
+
+Cell[TextData[{
+ "To make this work, we made use of the ",
+ StyleBox["Inverse",
+  FontWeight->"Bold"],
+ " command, which computes a matrix inverse, and the . command, which \
+implements matrix multiplication."
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733222487617275*^9, 3.7332224887754507`*^9}, {
+   3.733223168948677*^9, 3.733223198607778*^9}, 3.7332233163755693`*^9}],
+
+Cell["\<\
+Let\[CloseCurlyQuote]s get fancy now! I want to plot the eigenvalues of the \
+above matrix as a function of m2; I should see an avoided crossing when it is \
+equal to k1!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.73322321872506*^9, 3.7332232529270678`*^9}, 
+   3.7332233163756332`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"EVs", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"k", "\[Rule]", "1."}], ",", 
+      RowBox[{"m1", "\[Rule]", "1."}], ",", 
+      RowBox[{"kc", "\[Rule]", ".1"}]}], "}"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m2", ",", ".1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.},
+ CellChangeTimes->{{3.733223256613159*^9, 3.7332233163757343`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Mathematica can solve differential equations:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.7332216415862513`*^9, 3.7332216988540173`*^9}, {
+   3.733223339328476*^9, 3.733223391019291*^9}, 3.7332234872435417`*^9}],
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "''"}], "[", "x", "]"}], "==", 
+      RowBox[{"-", 
+       RowBox[{"y", "[", "x", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"y", "[", "0", "]"}], "==", "1"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "'"}], "[", "0", "]"}], "==", "0"}]}], "}"}], ",", 
+   RowBox[{"y", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{3.7332234872438707`*^9}],
+
+Cell["And it can solve systems of differential equations", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223407354582*^9, 3.7332234143247623`*^9}, 
+   3.73322348724401*^9}],
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{"v", "[", "t", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"-", "k"}], "m"], 
+       RowBox[{"x", "[", "t", "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "[", "0", "]"}], "\[Equal]", "1"}], ",", 
+     RowBox[{
+      RowBox[{"v", "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "[", "t", "]"}], ",", 
+     RowBox[{"v", "[", "t", "]"}]}], "}"}], ",", "t"}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223424895226*^9, 3.733223487244244*^9}}],
+
+Cell["It can also numerically solve differential equations:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223495196848*^9, 3.733223506041868*^9}, 
+   3.7332241017633677`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"soln", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "''"}], "[", "x", "]"}], "==", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"y", "[", "x", "]"}], "]"}]}], "-", 
+        RowBox[{".1", 
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "x", "]"}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"y", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "0", "]"}], "\[Equal]", "2.204"}]}], "}"}], 
+    ",", 
+    RowBox[{"y", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "50"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "x", "]"}], "/.", 
+    RowBox[{"soln", "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "50"}], "}"}], ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.73322350703535*^9, 3.733223665677787*^9}, 
+   3.733224101763728*^9}],
+
+Cell["\<\
+This solution looks super-weird! Let us manipulate it to see if we can figure \
+out what is going on!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223675285284*^9, 3.7332236898173513`*^9}, 
+   3.733224101763933*^9}],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"soln", "=", 
+       RowBox[{"NDSolve", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"\[Theta]", "''"}], "[", "t", "]"}], "==", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}], "-", 
+             RowBox[{".1", 
+              RowBox[{
+               RowBox[{"\[Theta]", "'"}], "[", "t", "]"}]}]}]}], ",", 
+           RowBox[{
+            RowBox[{"\[Theta]", "[", "0", "]"}], "\[Equal]", "0"}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\[Theta]", "'"}], "[", "0", "]"}], "\[Equal]", "yi"}]}],
+           "}"}], ",", 
+         RowBox[{"\[Theta]", "[", "t", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "50"}], "}"}]}], "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Theta]", "[", "t", "]"}], "/.", 
+        RowBox[{"soln", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "50"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "10"}], ",", "10"}], "}"}]}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"yi", ",", "0", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.7332236928067513`*^9, 3.733223792662017*^9}, 
+   3.733224101764266*^9}],
+
+Cell["\<\
+This is messy, let\[CloseCurlyQuote]s break it down! The manipulate command \
+runs its argument for a range of a parameter that you can control with a \
+slider!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223803415719*^9, 3.733223811574068*^9}, {
+   3.733223886705635*^9, 3.733223911967449*^9}, 3.7332241017645073`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Exp", "[", 
+       RowBox[{"-", 
+        SuperscriptBox["x", "2"]}], "]"}], 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Beta]", " ", "x"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Beta]", ",", "2"}], "}"}], ",", "0", ",", "10"}], "}"}]}], 
+  "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223812518578*^9, 3.733223866697708*^9}, 
+   3.733224101764867*^9}],
+
+Cell[TextData[{
+ "The module command allows me to execute a whole block of code, {defining \
+variables within braces only within the local scope} (",
+ StyleBox["if this bit doesn\[CloseCurlyQuote]t mean anything to you, ignore \
+it",
+  FontSlant->"Italic"],
+ "), and return only the last element:"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733223935522808*^9, 3.733224042856175*^9}, 
+   3.73322410176508*^9}],
+
+Cell[BoxData[
+ RowBox[{"x", "=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"y", "=", "4"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"z", "=", 
+      RowBox[{"Cos", "[", "x", "]"}]}], ";", 
+     RowBox[{
+      RowBox[{"Cos", "[", "z", "]"}], "+", ".1"}]}]}], "]"}]}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.},
+ CellChangeTimes->{{3.733224043561982*^9, 3.733224050159768*^9}, 
+   3.733224101765201*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+You have probably noticed by now that functions take their parameters inside \
+of brackets, rather than inside of perentheses! Let\[CloseCurlyQuote]s define \
+a function, just for fun:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.},
+ CellChangeTimes->{{3.733224109055079*^9, 3.7332241326021223`*^9}, 
+   3.7332592120964947`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Cos", "[", "x", "]"}], "+", 
+    RowBox[{"ArcTan", "[", "x", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"f", "[", "3", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"f", "[", "3", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"f", "[", "3.", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.},
+ CellChangeTimes->{{3.733224133431273*^9, 3.73322414262022*^9}, {
+   3.7332242198245487`*^9, 3.733224228612549*^9}, 3.733259212096798*^9}],
+
+Cell[TextData[{
+ "Notice that I have used ",
+ StyleBox["delayed assignment",
+  FontWeight->"Bold"],
+ " := rather than ",
+ StyleBox["assignment ",
+  FontWeight->"Bold"],
+ "=    . This is because I want to be sure that this assignment uses whatever \
+the value of x that I pass into f is, and not the value of x at the time when \
+I run the above line of code! Also notice that there is an underscore after \
+x; this is for pattern matching, and is always used in function definitions! \
+As you can see, there is a lot of richness under \
+mathematica\[CloseCurlyQuote]s hood that we are skipping. Don\
+\[CloseCurlyQuote]t worry about it for now, and just be sure to use those \
+underscores!"
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.},
+ CellChangeTimes->{{3.7332241450978947`*^9, 3.733224283904785*^9}, 
+   3.733259212097015*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Let\[CloseCurlyQuote]s now try to do some curve fitting/data \
+manipulation!", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733224594136381*^9, 3.7332246068189497`*^9}, 
+   3.733344131206007*^9, 3.7333469015254908`*^9}],
+
+Cell["First we generate some random data:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.7333436725724983`*^9, 3.73334368098868*^9}, 
+   3.7333441028327312`*^9, 3.733346901525805*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"jRand", "[", "]"}], "=", 
+   RowBox[{
+    RowBox[{"RandomReal", "[", "]"}], "-", ".5"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c0", "=", 
+   RowBox[{
+    RowBox[{"jRand", "[", "]"}], "*", "3."}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s0", "=", 
+   RowBox[{
+    RowBox[{"jRand", "[", "]"}], "*", ".5"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A0", "=", 
+   RowBox[{
+    RowBox[{"RandomReal", "[", "]"}], "*", "20"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c0", "=", 
+   RowBox[{
+    RowBox[{"jRand", "[", "]"}], "*", "5"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g0", "=", 
+   RowBox[{
+    RowBox[{"jRand", "[", "]"}], "*", "4"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tdat", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"c0", "+", 
+        RowBox[{"s0", "  ", "x"}], "+", 
+        FractionBox["A0", 
+         RowBox[{"1", "+", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"x", "-", "c0"}], 
+             RowBox[{"g0", "/", "2"}]], ")"}], "2"]}]], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"RandomReal", "[", "]"}], "-", ".5"}], ")"}], ".4"}]}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "15"}], ",", "20", ",", ".1"}], "}"}]}], "]"}]}], 
+  ";"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733259220026668*^9, 3.733259306171605*^9}, {
+   3.733259354482774*^9, 3.733259356766116*^9}, {3.7332594096628103`*^9, 
+   3.73325941009706*^9}, {3.733259496786294*^9, 3.733259498127434*^9}, {
+   3.7333436820884457`*^9, 3.7333438297321177`*^9}, {3.733343892370565*^9, 
+   3.733343894504259*^9}, 3.733344102833048*^9, 3.733346901526127*^9}],
+
+Cell["Let us see what the data looks like:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733344025974443*^9, 3.733344031961605*^9}, 
+   3.733344102833147*^9, 3.733346901527833*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "tdat", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733259275022058*^9, 3.733259276937405*^9}, 
+   3.733344102833291*^9, 3.733346901528202*^9}],
+
+Cell["\<\
+Now we pick a fit form and play with guess parameters by hand until the data \
+and fit form look similar:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733344035861803*^9, 3.7333440522542267`*^9}, 
+   3.733344102833563*^9, 3.73334690152842*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FitForm", "=", 
+   RowBox[{"d", "+", 
+    RowBox[{"\[Alpha]", 
+     RowBox[{"(", 
+      RowBox[{"x", "-", "x0"}], ")"}]}], "+", 
+    FractionBox["\[Beta]", 
+     RowBox[{"1", "+", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox[
+         RowBox[{"x", "-", "x0"}], 
+         RowBox[{"\[Gamma]", "/", "2"}]], ")"}], "2"]}]]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"GuessParms", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"d", "\[Rule]", 
+      RowBox[{"-", "1."}]}], ",", 
+     RowBox[{"\[Alpha]", "\[Rule]", 
+      RowBox[{"-", ".12"}]}], ",", 
+     RowBox[{"x0", "\[Rule]", 
+      RowBox[{"-", "1."}]}], ",", 
+     RowBox[{"\[Gamma]", "\[Rule]", "1."}], ",", 
+     RowBox[{"\[Beta]", "\[Rule]", "7"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"tdat", ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"FitForm", "/.", "GuessParms"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "15"}], ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.7332593148097687`*^9, 3.7332596335131693`*^9}, {
+   3.733343845711762*^9, 3.7333438677269583`*^9}, {3.7333439049092712`*^9, 
+   3.733344013531706*^9}, 3.7333441028337183`*^9, 3.733346901528879*^9}],
+
+Cell["\<\
+The code within the the braces is a list of \
+\[OpenCurlyDoubleQuote]replacement rules,\[CloseCurlyDoubleQuote] and the /. \
+tells mathematica to apply the replacement rules after the /. the expression \
+before the /.\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733346887709626*^9, 3.73334690152908*^9}}],
+
+Cell["\<\
+Now we call the fitting routine \[OpenCurlyDoubleQuote]FindFit\
+\[CloseCurlyDoubleQuote] with our guess as input!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.7333440554491787`*^9, 3.733344102833956*^9}, 
+   3.733346901529293*^9}],
+
+Cell[BoxData[{
+ RowBox[{"FitParms", "=", 
+  RowBox[{"FindFit", "[", 
+   RowBox[{"tdat", ",", "FitForm", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"d", ",", 
+        RowBox[{"-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Alpha]", ",", 
+        RowBox[{"-", ".12"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x0", ",", 
+        RowBox[{"-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Gamma]", ",", "1."}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Beta]", ",", "7."}], "}"}]}], "}"}], ",", "x"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"tdat", ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"FitForm", "/.", "FitParms"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "15"}], ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733259637053816*^9, 3.733259637978962*^9}, {
+   3.733344016308345*^9, 3.733344018798786*^9}, 3.733344102834104*^9, 
+   3.733346901529647*^9, {3.733347513126871*^9, 3.733347516814529*^9}}],
+
+Cell["et voila!", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.},
+ CellChangeTimes->{{3.733344079170656*^9, 3.733344102834485*^9}, 
+   3.733346901530212*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Shall we try to import some data and fit to that? The next line of code \
+downloads a file from my group\[CloseCurlyQuote]s website! You could also \
+manually download it with your web-browser, put it in the same folder as this \
+tutorial, and then use:\n",
+ StyleBox["SetDirectory[NotebookDirectory[]];indata=Import[\
+\[OpenCurlyDoubleQuote]TutorialData.csv\[CloseCurlyDoubleQuote]]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.7332216415862513`*^9, 3.7332216988540173`*^9}, {
+   3.733344144074275*^9, 3.7333441533568783`*^9}, {3.733346931618865*^9, 
+   3.733347002027129*^9}, 3.733347125956345*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   StyleBox["indata",
+    FontWeight->"Bold"], "=", 
+   RowBox[{
+   "Import", "[", "\"\<http://simonlab.uchicago.edu/TutorialData.csv\>\"", 
+    "]"}]}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.733346928426198*^9, 3.7333469284280043`*^9}, 
+   3.733347009292501*^9, 3.733347125956653*^9}],
+
+Cell["Let us see what this data looks like:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.733347019625354*^9, 3.733347025957849*^9}, 
+   3.733347125958973*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"indata", ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.733347031959845*^9, 3.733347039544935*^9}, 
+   3.733347125959154*^9}],
+
+Cell["\<\
+OK! So we can fit to this! Let\[CloseCurlyQuote]s define a guess function, \
+and tweak the parameters until they are about right, and then run the fit \
+routine!\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.733347040702675*^9, 3.733347065950077*^9}, 
+   3.73334712596002*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FitForm", "=", 
+   RowBox[{"A", " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "\[Alpha]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"x", "-", "x00"}], ")"}], "2"]}], "]"}], 
+    RowBox[{"Sin", "[", " ", 
+     RowBox[{
+      RowBox[{"\[Beta]", " ", "x"}], "+", "\[Phi]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"GuessParms", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"A", "\[Rule]", "1.1"}], ",", 
+     RowBox[{"\[Alpha]", "\[Rule]", ".1"}], ",", 
+     RowBox[{"\[Beta]", "\[Rule]", 
+      RowBox[{"2", "\[Pi]"}]}], ",", 
+     RowBox[{"\[Phi]", "\[Rule]", "1.5"}], ",", 
+     RowBox[{"x00", "\[Rule]", "2"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"indata", ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"FitForm", "/.", "GuessParms"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.7333470791220217`*^9, 3.7333470797245407`*^9}, 
+   3.733347125960993*^9}],
+
+Cell["Now that we are close, let\[CloseCurlyQuote]s fit to it and plot the \
+results:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.7333470911778107`*^9, 3.733347125961152*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"FitParms", "=", 
+  RowBox[{"FindFit", "[", 
+   RowBox[{"indata", ",", "FitForm", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"A", ",", "1."}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Alpha]", ",", ".1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Beta]", ",", 
+        RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Phi]", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x00", ",", "2"}], "}"}]}], "}"}], ",", "x"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"indata", ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"FitForm", "/.", "FitParms"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.},
+ CellChangeTimes->{{3.7333471119966173`*^9, 3.733347125961331*^9}, {
+  3.733347546132601*^9, 3.7333475470668707`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+What if I want to sort a list?
+Well first let\[CloseCurlyQuote]s make a list to sort:\
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400674660067*^9, 3.733400689090819*^9}, 
+   3.733401285143115*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomReal", "[", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "1", ",", "100"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400680937752*^9, 3.733400708564412*^9}, 
+   3.7334012851435547`*^9}],
+
+Cell["and plot its values", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.73340071019934*^9, 3.733400713767988*^9}, 
+   3.733401285143674*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "data", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400715281377*^9, 3.7334007175190783`*^9}, 
+   3.733401285143817*^9}],
+
+Cell["We could sort it by using the sort routine:", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7334007237378693`*^9, 3.7334007298940973`*^9}, 
+   3.7334012851439238`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sortedlist", "=", 
+   RowBox[{"Sort", "[", "data", "]"}]}], ";"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.73340073066925*^9, 3.733400739001801*^9}, 
+   3.733401285144112*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "sortedlist", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400739797512*^9, 3.733400743359569*^9}, 
+   3.733401285144264*^9}],
+
+Cell[TextData[{
+ "Or we could do it ourselves, to learn about ",
+ StyleBox["If",
+  FontWeight->"Bold"],
+ " statements, and ",
+ StyleBox["While",
+  FontWeight->"Bold"],
+ " loops. We will implement the bubble sort, an extremely inefficient but \
+simple to work with sort routine."
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400750067457*^9, 3.733400791853298*^9}, 
+   3.733401285144425*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sortedlist", "=", "data"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Done", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"While", "[", 
+  RowBox[{
+   RowBox[{"Done", "\[Equal]", "False"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Done", "=", "True"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"j", "=", "1"}], ",", 
+      RowBox[{"j", "\[LessEqual]", 
+       RowBox[{
+        RowBox[{"Length", "[", "sortedlist", "]"}], "-", "1"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"sortedlist", "[", 
+           RowBox[{"[", "j", "]"}], "]"}], ">", 
+          RowBox[{"sortedlist", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", "+", "1"}], "]"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"tmp", "=", 
+           RowBox[{"sortedlist", "[", 
+            RowBox[{"[", "j", "]"}], "]"}]}], ";", 
+          RowBox[{
+           RowBox[{"sortedlist", "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "=", 
+           RowBox[{"sortedlist", "[", 
+            RowBox[{"[", 
+             RowBox[{"j", "+", "1"}], "]"}], "]"}]}], ";", 
+          RowBox[{
+           RowBox[{"sortedlist", "[", 
+            RowBox[{"[", 
+             RowBox[{"j", "+", "1"}], "]"}], "]"}], "=", "tmp"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Done", "=", "False"}]}], ",", "\[IndentingNewLine]", 
+         "True"}], "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"j", "=", 
+        RowBox[{"j", "+", "1"}]}]}]}], "\[IndentingNewLine]", "]"}]}]}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400793552753*^9, 3.733400972668728*^9}, {
+   3.7334010119544353`*^9, 3.7334010981564407`*^9}, {3.7334012388270407`*^9, 
+   3.733401251516349*^9}, 3.733401285144601*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "sortedlist", "]"}]], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400904572013*^9, 3.733400907473568*^9}, 
+   3.733401285144743*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668], 
+     AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJw1yw1M1HUcx/F/TItqg2Mh4cXiQKhDiCsQA4T48HjH8XTAHXexa4GBHYw8
+S55j418ECjIMx0PS8iClAJH0NE8d4ikC4RSOeByIgQHxoMCU0IYb1fz+f9tv
+v71+730c9mrjUs0Yhkn57/7/Pj+rAYx98Eb4WFEAfcCotW6eajtONocxz/Jv
+zcE6Mg/GYtXCG+vNZGvUH8x5PFx7hmyLqVLneb6VnmyHqVe0rw2PG8gCGA37
+ikoMl8iOMI3X6Uo3OTtBkJWti7e5TH4LB5rcDbKvOAshDAhnU25fJ+9Ekn/u
+Jf3CDbIbpnwkmsIjnWR3SK69iCDxTfK7sO0YilnP5/weVktmrp8+3032wFNL
+nu57tx6yJ8Zed/Dy3OC8CzztsEsh7zbZC0/3XXm5Ut1H3o215bU5sa+J/D6+
+Wb6osMnh7I35IsO56krOPlDHz6b/scTZF5rUFn2C2wB5D5KEuhNPIjj7wVrz
+Tm1/CWd/COQipf6l38kfoKpCzhf5DZIDIPvJP23720NkwO2QpXzuHJkFEB44
+mZ80TD0QB6R9/KKuEeqBEOgsatWto9SDMFbSn36jk8wGIeN8tXeuievBSLLb
+Jn00zfVgtDtfM0mOjVEPQaTS5WrxHTIbgvoCl/3tXePUQ3F4essxnYnMhkKo
+Le8P8ZygHgZZebntWQWZDQPvoYU8qIzrYiTNNhRMud6lLob689PpUo971CVI
+MT6xK1kjsxLoFx0lZU7T1MORop1MTZST2XAUmLeGbjrcpy6FWcyj9bRTZFaK
+mxNHYl64wvUInDial5+8yPUIfC1yLQyum6EeiUjHB9aiM2Q2Eo52F1b5Bq5H
+YWRPmaC9l+tRKJBlDxjUs9Sj8d3xJmFrDpmNRq6jmaVdA9djsJYakbTZwvUY
+3OIPDjibuC5Dk2gi2Wvr3HNDhr62L2waeGRWBsH0l9/ekZONMkiSq9NGi8lM
+LOC51NHdw+1jkS0US1r4f9E+FvdOZvl32ZONsdBoZI9n88hMHBJ+tc6tLCcj
+DjXivWnqX7h9HLZc9sveHjhP+zhET6W6j+eRmXgwH1f5e2sWaB+P3Y1Vuops
+MhuPjEOvyuwGycZ4LP6ztXtmjczIkXk10ZVXtEh7OYzdvc8uDJFZOUZyNJm5
+G2SjHDNt/dtWpEu0V0DuuX/GP4MMBZo8Rz+zOkVmFdDYt9cfzXpAewVUjc3M
+J51kJgH86p7p7mdkJMBJ9UNjk8VD2ifgosjv7N0dZGMC9Kk+hll3MqPEm/ZB
+da7BZCghDSjZ+FPJ7ZXYOfmbSlTB7ZUw9Xx0stdpmfYqdHzq4fBzIhkq1NRk
+WoXtWKG9Cvctb5VG+ZKNKhyu+7FiNJjMfIjFNPPcXRMrAf8CBpneuw==
+      
+      "]]}, {}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 100.}, {0, 0.9955084175483624}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.733400908012062*^9, 3.7334009315624104`*^9}, {
+  3.7334009753537083`*^9, 3.733400978263023*^9}, {3.733401255989265*^9, 
+  3.733401285144932*^9}}],
+
+Cell["It worked!!", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.7334012706167717`*^9, 3.733401285145019*^9}}]
+}, Closed]],
+
+Cell[TextData[StyleBox["That is it! What else would you like to learn about \
+in the remaining time!?\nWhile you think about it, try these:",
+ FontSize->24,
+ FontWeight->"Bold",
+ FontSlant->"Italic"]], "Text",
+ CellChangeTimes->{{3.733347657356555*^9, 3.733347666459888*^9}, {
+  3.73334826782841*^9, 3.7333482731800413`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"MySong", "=", 
+   RowBox[{
+   "Import", "[", "\"\<http://simonlab.uchicago.edu/TutorialSong.mid\>\"", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Sound", "[", "MySong", "]"}]}], "Input",
+ CellChangeTimes->{{3.7333479760591908`*^9, 3.7333480032333393`*^9}, {
+  3.733348095333083*^9, 3.733348095605392*^9}, {3.733348148535831*^9, 
+  3.733348157046282*^9}, {3.733348204440413*^9, 3.733348205622553*^9}}],
+
+Cell[BoxData[
+ RowBox[{"CurrentImage", "[", "]"}]], "Input"],
+
+Cell[TextData[{
+ StyleBox["Other things I could teach you about if you want\n",
+  FontWeight->"Bold"],
+ "Making 2D Graphics\nMaking 3D Graphics\nMaking Animations\nSolving Partial \
+Differential Equations Numerically/Analytically\nLooping Structures, and more \
+general programming techniques"
+}], "Text",
+ CellChangeTimes->{{3.733401317851568*^9, 3.733401322563052*^9}}]
+},
+WindowSize->{979, 612},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 245, 6, 99, "Text"],
+Cell[CellGroupData[{
+Cell[828, 30, 320, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1151, 38, 223, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1377, 44, 388, 8, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[1768, 54, 372, 7, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[2143, 63, 216, 5, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[2362, 70, 275, 8, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2674, 83, 476, 12, 51, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[3153, 97, 315, 8, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[3471, 107, 880, 14, 125, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[4354, 123, 192, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[4549, 129, 242, 5, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[4794, 136, 265, 7, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[5062, 145, 473, 8, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[5538, 155, 376, 10, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[5917, 167, 612, 18, 56, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[6532, 187, 355, 10, 49, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[6890, 199, 896, 25, 89, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7823, 229, 513, 12, 32, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.}],
+Cell[8339, 243, 504, 12, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.}],
+Cell[8846, 257, 5398, 178, 53, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.}],
+Cell[14247, 437, 525, 8, 68, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10002.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14809, 450, 429, 10, 46, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.}],
+Cell[15241, 462, 1084, 32, 117, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.}],
+Cell[16328, 496, 606, 9, 68, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.}],
+Cell[16937, 507, 342, 8, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.}],
+Cell[17282, 517, 460, 11, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10003.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[17779, 533, 584, 17, 46, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10004.}],
+Cell[18366, 552, 344, 9, 52, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10004.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18747, 566, 970, 33, 46, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.}],
+Cell[19720, 601, 730, 22, 50, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.}],
+Cell[20453, 625, 387, 8, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10005.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[20877, 638, 167, 2, 27, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[21047, 642, 549, 17, 49, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[21599, 661, 262, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[21864, 669, 595, 18, 49, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[22462, 689, 181, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[22646, 694, 196, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[22845, 699, 781, 24, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[23629, 725, 240, 4, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[23872, 731, 806, 24, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}],
+Cell[24681, 757, 159, 2, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10006.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24877, 764, 362, 6, 27, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[25242, 772, 490, 14, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[25735, 788, 233, 4, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[25971, 794, 213, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[26187, 800, 567, 17, 48, "Output",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[26757, 819, 312, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[27072, 827, 387, 7, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[27462, 836, 293, 6, 54, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[27758, 844, 360, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[28121, 852, 445, 8, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[28569, 862, 738, 23, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[29310, 887, 287, 5, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[29600, 894, 399, 10, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[30002, 906, 418, 9, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[30423, 917, 344, 7, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}],
+Cell[30770, 926, 512, 14, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10007.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[31319, 945, 260, 3, 27, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[31582, 950, 558, 17, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[32143, 969, 214, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[32360, 974, 836, 25, 50, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[33199, 1001, 218, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[33420, 1006, 1194, 37, 54, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[34617, 1045, 274, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[34894, 1053, 1707, 47, 75, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[36604, 1102, 379, 7, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[36986, 1111, 803, 25, 35, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[37792, 1138, 455, 10, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}],
+Cell[38250, 1150, 450, 13, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10008.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[38737, 1168, 359, 7, 46, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.}],
+Cell[39099, 1177, 579, 13, 96, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.}],
+Cell[39681, 1192, 850, 18, 87, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10009.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[40568, 1215, 265, 4, 27, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[40836, 1221, 223, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[41062, 1226, 1924, 59, 190, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[42989, 1287, 221, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[43213, 1292, 233, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[43449, 1298, 299, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[43751, 1306, 1511, 43, 108, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[45265, 1351, 361, 7, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[45629, 1360, 286, 6, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[45918, 1368, 1291, 35, 54, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}],
+Cell[47212, 1405, 172, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10010.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[47421, 1413, 686, 12, 65, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[48110, 1427, 376, 10, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[48489, 1439, 200, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[48692, 1444, 276, 6, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[48971, 1452, 331, 7, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[49305, 1461, 1328, 38, 77, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[50636, 1501, 218, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}],
+Cell[50857, 1506, 1157, 32, 54, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10011.}]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[52051, 1543, 256, 6, 46, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[52310, 1551, 377, 10, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[52690, 1563, 181, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[52874, 1568, 213, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[53090, 1574, 212, 3, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[53305, 1579, 257, 6, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[53565, 1587, 217, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[53785, 1593, 437, 12, 49, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[54225, 1607, 2006, 50, 285, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[56234, 1659, 217, 4, 32, "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[56454, 1665, 2968, 61, 243, "Output",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
+Cell[59425, 1728, 150, 2, 30, "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.}]
+}, Closed]],
+Cell[59590, 1733, 325, 6, 70, "Text"],
+Cell[59918, 1741, 447, 9, 54, "Input"],
+Cell[60368, 1752, 60, 1, 32, "Input"],
+Cell[60431, 1755, 371, 7, 125, "Text"]
+}
+]
+*)
+

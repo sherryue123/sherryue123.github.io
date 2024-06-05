@@ -1,0 +1,51 @@
+{%- set thispage_title = 'Meeting Schedule for The Simon Lab at The University of Chicago' -%}
+{%- set thispage_description = 'The Simon Lab meets regularly to discuss new journal articles, recent research, and scientific and technical advances.' -%}
+{%- set header_banner = meetings.header_banner -%}
+{%- include 'header.html' -%}
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Meetings
+                    <small>in the Simon Lab<span class="hidden-xs"> at The University of Chicago</span></small>
+                </h1>
+                 <ol class="breadcrumb">
+                    <li><a href="{{DirectoryPrefix}}index.html">Simon Lab</a>
+                    </li>
+                    <li class="active">Meetings</li>
+                </ol>
+           </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+
+		{%- for meeting in meetings.meetings -%}
+        <div class="row">
+				<div class="col-md-7">
+                    <img class="img-responsive" src="graphics/meetings/{{meeting.img}}" alt="{{meeting.name}}">
+            </div>
+            <div class="col-md-5">
+                <h2>{{meeting.name}}</h2>
+                <h3>{{meeting.time}}</h3>
+                <h4>{{meeting.location}}</h4>
+                <p>{{meeting.description}}</p>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+		{%- if not loop.last -%} <hr> {%- endif -%}
+		{%- endfor -%}
+
+		</div>
+        {%- include 'footer.html' -%}
+
+   
+</body>
+
+</html>
