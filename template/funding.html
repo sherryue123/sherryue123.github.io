@@ -1,0 +1,65 @@
+{%- set thispage_title = 'Funding Sources for The Simon Lab at The University of Chicago' -%}
+{%- set thispage_description = 'The Simon Lab appreciates our generous benefactors and granting agencies who support our research and propel our science forward.' -%}
+{%- set header_banner = funding.header_banner -%}
+{%- include 'header.html' -%}
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Funding Sources
+                    <small><span class="hidden-xs">for the Simon Lab at The University of Chicago</span></small>
+                </h1>
+                 <ol class="breadcrumb">
+                    <li><a href="{{DirectoryPrefix}}index.html">Simon Lab</a>
+                    </li>
+                    <li class="active">Funding</li>
+                </ol>
+           </div>
+        </div>
+        <!-- /.row -->
+
+          <!-- Our Funders -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Our Funding</h2>
+            </div>
+            <div class="col-lg-12">
+                <p>{{funding.statement}} </p>
+            </div>
+			<hr>
+			
+			{%- for funder in funding.funders -%}
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6
+				{% if loop.index ==13 %} col-xs-offset-3 col-sm-offset-4 col-md-offset-4_5 col-lg-offset-4_5 {% endif %}
+				">
+				{%- if funder.url is defined -%}
+					<a href="{{funder.url}}">
+				{%- endif -%}
+				{%- if funder.img is defined -%}
+					<img class="img-responsive funding-graphic" src="graphics/funding/{{funder.img}}" alt="{{funder.name}}">
+					{%- else -%}
+					<p> {{funder.name}} </p>
+				{%- endif -%}
+				{%- if funder.url is defined -%}
+					</a>
+				{%- endif -%}
+			</div>
+					{%- if loop.index is divisibleby 4 -%}  <div class="clearfix visible-lg-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 4 -%}  <div class="clearfix visible-md-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 3 -%}  <div class="clearfix visible-sm-block"> </div> {%- endif -%}
+					{%- if loop.index is divisibleby 2 -%}  <div class="clearfix visible-xs-block"> </div> {%- endif -%}
+			{%- endfor -%}
+        </div>
+        	
+
+		</div>
+        {%- include 'footer.html' -%}
+
+   
+</body>
+
+</html>

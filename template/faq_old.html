@@ -1,0 +1,55 @@
+{%- set thispage_title = 'Frequently asked questions about The Engel Group at The University of Chicago' -%}
+{%- set thispage_description = 'frequencty asked questions including how to join the group, what we do, how our field works, and other questions of interest to prospective students.' -%}
+{%- set header_banner = faq.header_banner -%}
+{%- include 'header.html' -%}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Frequently Asked Questions
+                    <small><span class="hidden-xs">about the Engel Group</span></small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{{DirectoryPrefix}}index.html">Engel Group</a>
+                    </li>
+                    <li class="active">FAQ</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel-group" id="accordion">
+                    {%- for question in faq.questions -%}
+					<div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse{{loop.index}}">{{question.question}}</a>
+                            </h3>
+                        </div>
+                        <div id="collapse{{loop.index}}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                {{question.answer}}
+                            </div>
+                        </div>
+                    </div>
+					{%- endfor -%}
+                </div>
+                <!-- /.panel-group -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+		</div>
+		
+		
+               {%- include 'footer.html' -%}
+   
+</body>
+
+</html>

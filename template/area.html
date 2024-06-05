@@ -1,0 +1,112 @@
+{%- set thispage_title = myarea.title  -%}
+{%- set thispage_description = myarea.description|join(", ")  -%}
+
+    {%- include 'header.html' -%}
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{myarea.title}}
+                    <small>{{myarea.subtitle}}</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{{DirectoryPrefix}}index.html">Simon Lab</a>
+                    </li>
+                    <li><a href="{{DirectoryPrefix}}research.html">Research</a>
+                    </li>
+                    <li class="active">{{myarea.title}}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                 <img class="img-responsive img-portfolio" src="{{DirectoryPrefix}}graphics/researchareas/{{ myarea.image }}" alt="{{myarea.title}}">
+                </div>
+
+            <div class="col-md-4 text-justify">
+                <h3>{{myarea.title}}</h3>
+                
+				{%- for line in myarea.description -%}
+                    {%- if loop.index == 2 -%} </div><div class="col-md-12 text-justify"> {%- endif -%}
+					<p>{{line}}</p> 
+                   {%- endfor -%}
+                
+                
+				{%- if myarea.details is defined -%}
+				</div><div class="col-md-12 text-justify">
+				<h3>Approach</h3>
+                <ul>
+				 {%- for detail in myarea.details -%}
+                    <li>{{detail}}</li>
+                   {%- endfor -%}
+                </ul>
+				{%- endif -%}
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        {%- if myarea.tag is defined -%}
+				{%- set counter = [0] -%}
+				{%- for pub in pubs -%}
+					{%- if pub[myarea.tag] is defined -%}
+						{%- set _ = counter.append(counter.pop()+1)   -%}
+					{%- endif -%}
+				{%- endfor -%}
+			{%- if counter[0] >0  -%}
+					
+			<!-- Related Projects Row -->
+			<div class="row">
+
+				<div class="col-lg-12">
+					<h3 class="page-header">Related Papers</h3>
+				</div>
+			</div>
+					 {%- for pub in pubs if pub[myarea.tag] is defined-%}
+					  {%- if loop.index0 < 5 -%}
+					  {%- if pub.img is not defined -%}
+							<div class="row publication-row  {% if loop.index is even %} graybackground {% endif %}"  >
+								<div class="col-md-12 publication">
+									{%- if pub.url is defined -%}
+										<p>{{pub.auth}}, <a href="{{pub.url}}">"{{pub.title}}"</a> {{pub.ref}}</p>
+									{%- else -%}
+										<p>{{pub.auth}}, "{{pub.title}}" {{pub.ref}}</p>
+									{%- endif -%}
+
+								</div>	
+							</div>
+						{%- else -%}
+							<div class="row publication-row  {% if loop.index is even %} graybackground {% endif %}" >
+								<div class="col-md-9 col-sm-10 publication ">
+									{%- if pub.url is defined -%}
+										<p>{{pub.auth}}, <a href="{{pub.url}}">"{{pub.title}}"</a> {{pub.ref}}</p>
+									{%- else -%}
+										<p>{{pub.auth}}, "{{pub.title}}" {{pub.ref}}</p>
+									{%- endif -%}
+								</div>	
+								<div class="col-md-3 col-sm-2 hidden-xs publication">
+									<img class="img-responsive publication-graphic" src="{{DirectoryPrefix}}graphics/publications/{{pub.img}}" alt="{{pub.title}}">
+								</div>
+							</div>
+				  {%- endif -%}
+			  {%- endif -%}
+			{%- endfor -%}
+
+
+			
+       
+		{%- endif -%}
+        {%- endif -%}
+        <!-- /.row -->
+		</div>
+               {%- include 'footer.html' -%}
+</body>
+
+</html>
