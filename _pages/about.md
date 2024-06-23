@@ -7,6 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
+**My [group website](http://zhang.apam.columbia.edu) at Columbia University is now live! We are always looking for motivated and creative individuals at all levels. Please visit for the latest updates and information!**
+
 I am a Miller Postdoctoral Fellow at UC Berkeley, working with [Alp Sipahigil](https://quantumdevices.berkeley.edu/team/). I received my Ph.D. in Applied Physics from Caltech in 2023 and B.Eng. from Tsinghua University in 2017. 
 
 I will be starting my own group at Columbia University in January 2025. I am very excited about contributing to the frontier of quantum science and technology in this new role! Feel free to reach out to me if you are also interested in this field.
@@ -15,7 +17,7 @@ I am dedicated to pushing the boundaries of quantum technology and unlocking its
 
 I have been fortunate to have collaborated with outstanding mentors/colleagues from around the world, including [Oskar Painter](https://painterlab.caltech.edu/faculty/), [Soonwon Choi](https://physics.mit.edu/faculty/soonwon-choi/), [Alejandro González-Tudela](https://sites.google.com/view/gonzaleztudela), [Kerry Vahala](https://vahala.caltech.edu/people), [Yun-Feng Xiao](http://researchgroups.pku.edu.cn/microcavity/en/zdylm/12811/list/index.htm), and [Wenshan Cai](https://cailab.gatech.edu/group.html).
 
-Feel free to reach me at x(dot)sherry(dot)zhang(at)berkeley(dot)edu!
+Feel free to reach me at zhang(dot)xueyue(at)columbia(dot)edu!
 
 ## News and activities
 * **11/14/2023** I am honored to be awarded the Boeing [Quantum Creator Prize](https://chicagoquantum.org/education-and-training/quantum-creators-prize#:~:text=The%20prize%20promotes%20researchers%20whose,a%20broad%20range%20of%20backgrounds.). I will be in Chicago for the [2023 Chicago Quantum Summit](https://chicagoquantum.org/events/2023-chicago-quantum-summit) and the Quantum Creator Symposium. Hope to connect with you there!
