@@ -27,7 +27,8 @@ Feel free to reach me at zhang(dot)xueyue(at)columbia(dot)edu!
 * **4/3/2023** I will be visiting Columbia University and giving a seminar "Superconducting Circuit Architectures Based on Light-Matter Interactions".
 * **3/28/2023** I have joined UC Berkeley as a [Miller research fellow](https://miller.berkeley.edu/about) working with  [Alp Sipahigil](https://quantumdevices.berkeley.edu/). 
 * **2/21/2023** I have passed my thesis defense with the title "Superconducting circuit architectures based on waveguide quantum electromagnetics" and become Dr. Zhang! 
-* **1/20/2023** Our manuscript ''A superconducting quantum simulator basedon a photonic-bandgap metamaterial'' is published in Science as a Research Article! [*Science* **379**, 6629 (2023)](https://www.science.org/doi/10.1126/science.ade7651).
+* **1/20/2023** Our manuscript ''A superconducting quantum simulator based
+on a photonic-bandgap metamaterial'' is published in Science as a Research Article! [*Science* **379**, 6629 (2023)](https://www.science.org/doi/10.1126/science.ade7651).
 * **12/15/2022** I'm giving an invited talk at the QuantumFest (Harvard Quantum Initiative)  titled "A scalable superconducting quantum architecture with long-range connectivity". 
 * **9/16/2022** I'm giving an invited special seminar at Stanford University  titled "A scalable superconducting quantum architecture with long-range connectivity". 
 * **9/9/2022** I'm giving an invited talk at the [IQIM Seminar](https://qse.caltech.edu/talks/iqim-postdoctoral-and-graduate-student-seminar-90270) (Caltech)  titled "A scalable superconducting quantum architecture with long-range connectivity". 
